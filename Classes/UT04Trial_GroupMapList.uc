@@ -1,0 +1,1 @@
+class UT04Trial_GroupMapList extends UT04Trial_MapList;

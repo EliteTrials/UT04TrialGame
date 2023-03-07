@@ -1,0 +1,1 @@
+class UT04Trial_EasyMapList extends UT04Trial_MapList;

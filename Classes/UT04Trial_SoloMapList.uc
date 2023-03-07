@@ -1,0 +1,1 @@
+class UT04Trial_SoloMapList extends UT04Trial_MapList;
