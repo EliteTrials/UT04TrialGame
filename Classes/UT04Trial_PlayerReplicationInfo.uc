@@ -1,0 +1,1 @@
+class UT04Trial_PlayerReplicationInfo extends ASPlayerReplicationInfo;

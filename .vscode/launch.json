@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Play Standalone",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../System/UT2004.exe",
+            "args": ["STR-TechChallenge-01-A?Game=UT04TrialGame.UT04Trial_SoloGameInfo?SpectatorOnly=0?QuickStart=1", "-norunaway"],
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
+            "name": "Join Server",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../System/UT2004.exe",
+            "args": ["127.0.0.1?SpectatorOnly=0"],
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
+            "name": "Host Server",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../System/UCC.exe",
+            "args": ["server", "STR-Eliot'sTrial?Game=UT04TrialGame.UT04Trial_SoloGameInfo?QuickStart=1", "-norunaway"],
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
+            "name": "Debug Standalone",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../System/UDebugger.exe",
+            "args": ["STR-Eliot'sTrial?Game=UT04TrialGame.UT04Trial_SoloGameInfo?SpectatorOnly=0?QuickStart=1", "-norunaway"],
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole"
+        },
+    ]
+}

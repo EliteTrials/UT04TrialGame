@@ -1,1 +1,2 @@
-class UT04Trial_MapList extends ASMapList;
+class UT04Trial_MapList extends ASMapList
+    abstract;
