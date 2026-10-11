@@ -40,6 +40,17 @@ function InitGameReplicationInfo()
     ASGameReplicationInfo(GameReplicationInfo).MaxRounds = 1;
 }
 
+function bool NeedPlayers()
+{
+    return false; // solo mode
+}
+
+function bool AddBot(optional string botName)
+{
+    // Never add any bots, regardless of settings, trials is not designed to be played against bots.
+    return false;
+}
+
 event PlayerController Login
 (
     string Portal,
