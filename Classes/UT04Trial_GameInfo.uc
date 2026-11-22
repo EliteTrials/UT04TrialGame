@@ -309,13 +309,23 @@ function ShowPathTo(PlayerController P, Int TeamNum)
     }
 }
 
-// Disallow team changing.
-// But, we still should pick a team so that players can disable objectives :/
+function RestartPlayer(Controller player)
+{
+    // A spectator rejoins without a team in Trials. Stock objectives still need an attacker.
+    if (player != none && player.PlayerReplicationInfo != none && !player.PlayerReplicationInfo.bOnlySpectator
+        && player.PlayerReplicationInfo.Team == none) {
+        ChangeTeam(player, CurrentAttackingTeam, false);
+    }
+
+    super.RestartPlayer(player);
+}
+
+// All trial participants use the internal attacking team.
 function bool ChangeTeam(Controller Other, int N, bool bNewTeam)
 {
     local UnrealTeamInfo NewTeam;
 
-    NewTeam = Teams[PickTeam(CurrentAttackingTeam,Other)];
+    NewTeam = Teams[CurrentAttackingTeam];
 
     // check if already on this team
     if ( Other.PlayerReplicationInfo.Team == NewTeam )
