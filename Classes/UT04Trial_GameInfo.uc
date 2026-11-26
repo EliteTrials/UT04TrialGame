@@ -18,6 +18,10 @@ event InitGame( string Options, out string Error )
     // Skip Assault and TeamGame options.
     super(DeathMatch).InitGame( Options, Error );
 
+    // Trials always run at the highest UT2004 difficulty (Godlike).
+    GameDifficulty = 7.0;
+    AdjustedDifficulty = GameDifficulty;
+
     RoundTimeLimit		= Max( 0, GetIntOption( Options, "RoundTimeLimit", RoundTimeLimit ) );
     PracticeTimeLimit	= Max( 0, GetIntOption( Options, "PracticeTimeLimit", PracticeTimeLimit ) );
 
